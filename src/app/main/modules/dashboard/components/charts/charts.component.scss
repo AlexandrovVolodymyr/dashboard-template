@@ -1,0 +1,23 @@
+.charts-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+  }
+
+  &__item {
+    background-color: #fff;
+    border-radius: 8px;
+    flex: 0 0 32%;
+    max-width: 32%;
+    padding: 16px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    @media screen and (max-width: 1200px) {
+      flex: 0 0 100%;
+      max-width: 60%;
+      margin: auto auto 20px;
+    }
+  }
+}

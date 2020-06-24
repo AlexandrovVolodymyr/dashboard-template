@@ -1,0 +1,20 @@
+<div class="card">
+  <mat-card *ngIf="card">
+    <div class="card-shell-header">
+      <div class="card-icon" mat-card-image>
+        <mat-icon>{{ card.icon }}</mat-icon>
+      </div>
+      <mat-card-content>
+        <div class="card-info">
+          <div class="card-name">{{ card.name }}</div>
+          <div class="card-count" *ngIf="card.count > 1">{{ card.count }}</div>
+          <div class="card-profit" *ngIf="card.profit">+ {{ card.profit }}</div>
+        </div>
+      </mat-card-content>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-card-actions align="right">
+      <span class="see-more">See more</span>
+    </mat-card-actions>
+  </mat-card>
+</div>

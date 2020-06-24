@@ -1,0 +1,109 @@
+.statistics {
+  margin-top: 75px;
+  @media screen and (max-width: 1200px) {
+    margin-top: 35px;
+  }
+
+  &__title {
+    color: #3d4959;
+    margin-bottom: 5px;
+    text-align: center;
+
+    .mat-badge-content {
+      top: 0;
+      right: -30px;
+    }
+  }
+
+  .statistics-select {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    select {
+      background: #ffffff;
+      border: 1px solid #dedede;
+      border-radius: 8px;
+      min-width: 200px;
+      padding: 10px;
+    }
+
+    .mat-badge-content {
+      top: 4px;
+      right: -30px;
+    }
+  }
+
+  .statistics-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    &:after {
+      content: '';
+      border: 1px solid rgb(255, 64, 129);
+      position: absolute;
+      left: -15px;
+      right: -15px;
+      top: -22px;
+      bottom: -15px;
+      z-index: -1;
+      @media screen and (max-width: 1200px) {
+        bottom: 10px;
+      }
+    }
+
+    &__item {
+      flex: 0 0 24%;
+      max-width: 24%;
+      @media screen and (max-width: 1200px) {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin-bottom: 30px;
+      }
+      &:nth-child(1) {
+        &::ng-deep {
+          .card-icon, .mat-divider {
+            background: rgba(0, 0, 255, 1);
+          }
+        }
+      }
+      &:nth-child(2) {
+        &::ng-deep {
+          .card-icon, .mat-divider {
+            background: rgba(128, 0, 128, 1);
+          }
+        }
+      }
+      &:nth-child(3) {
+        &::ng-deep {
+          .card-icon, .mat-divider {
+            background: rgba(0, 128, 0, 1);
+          }
+        }
+      }
+      &:nth-child(4) {
+        &::ng-deep {
+          .card-icon, .mat-divider {
+            background: rgba(255, 165, 0, 1);
+          }
+        }
+      }
+      &--active {
+        &:nth-child(1) {
+          box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.4);
+        }
+        &:nth-child(2) {
+          box-shadow: 0 0 5px 2px rgba(128, 0, 128, 0.4);
+        }
+        &:nth-child(3) {
+          box-shadow: 0 0 5px 2px rgba(0, 128, 0, 0.4);
+        }
+        &:nth-child(4) {
+          box-shadow: 0 0 5px 2px rgba(255, 165, 0, 0.4);
+        }
+      }
+    }
+  }
+}

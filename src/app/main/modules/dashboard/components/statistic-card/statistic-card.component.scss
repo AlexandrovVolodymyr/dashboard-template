@@ -1,0 +1,54 @@
+.card {
+
+  .mat-card {
+    padding-top: 10px;
+  }
+
+  .card-name {
+    color: #3d4959;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+
+  .card-count, .card-profit {
+    color: #a6a6a6;
+    font-size: 20px;
+    text-align: right;
+    margin-top: 5px;
+  }
+
+  .card-shell-header {
+    display: flex;
+    justify-content: space-between;
+
+    .card-icon {
+      color: #ffffff;
+      border-radius: 8px;
+      flex: 0 0 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(0, -20px);
+      width: unset;
+      margin: 0;
+    }
+  }
+
+  .mat-card-actions {
+    margin: 0;
+  }
+
+  .mat-divider {
+    left: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .see-more {
+    color: #a5b3ff;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}

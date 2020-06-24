@@ -1,0 +1,21 @@
+<div class="gallery">
+  <ul class="gallery-list">
+    <li class="gallery-list__item" *ngFor="let image of gallery">
+      <div class="gallery-card">
+        <div class="gallery-card__image" [ngStyle]="{'background-image': 'url(' + image.src + ')'}"></div>
+        <div class="gallery-card__text">{{ image.text }}</div>
+        <div class="gallery-card__info">
+          <div class="date">{{ image.date}}</div>
+          <div class="read-more">Read More</div>
+        </div>
+<!--        <span *ngIf="image.badge"-->
+<!--              class="image-badge"-->
+<!--              matBadgeColor="accent"-->
+<!--              matBadgeSize="large"-->
+<!--              matBadge="{{ image.badge }}"-->
+<!--              matBadgeOverlap="false">-->
+<!--        </span>-->
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+<div class="statistics">
+  <h2 class="statistics__title">
+<!--    <span matBadge="1" matBadgeOverlap="false" matBadgeSize="large" matBadgeColor="accent" matBadgePosition="above after">Statistics</span>-->
+    Statistics
+  </h2>
+
+  <label class="statistics-select">
+    <select [(ngModel)]="optionValue">
+      <option value="{{ opt.name }}" *ngFor="let opt of statistics">{{ opt.name }}</option>
+    </select>
+<!--    <span matBadge="3" matBadgeOverlap="false" matBadgeSize="large" matBadgeColor="accent" matBadgePosition="after"></span>-->
+  </label>
+
+  <ul class="statistics-list">
+    <li class="statistics-list__item" *ngFor="let card of statistics" [class.statistics-list__item--active]="card.name === optionValue">
+      <app-statistic-card [card]="card"></app-statistic-card>
+    </li>
+  </ul>
+</div>

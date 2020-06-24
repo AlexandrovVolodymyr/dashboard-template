@@ -1,0 +1,54 @@
+<main class="main">
+  <app-header></app-header>
+
+  <mat-sidenav-container class="main-layout">
+    <mat-sidenav opened mode="side">
+      <mat-nav-list class="main-nav">
+        <a mat-list-item class="mat-list-item main-nav__link"
+           routerLink="/dashboard"
+           routerLinkActive="main-nav__link--active">
+          <mat-icon>dashboard</mat-icon>
+          <span mat-ripple class="text">Dashboard</span>
+        </a>
+        <a mat-list-item class="mat-list-item main-nav__link"
+           routerLink="/calendar"
+           routerLinkActive="main-nav__link--active">
+          <mat-icon>calendar_today</mat-icon>
+          <span mat-ripple class="text">Calendar</span>
+        </a>
+        <a mat-list-item class="mat-list-item main-nav__link"
+           routerLink="/chat"
+           routerLinkActive="main-nav__link--active">
+          <mat-icon>chat</mat-icon>
+          <span mat-ripple class="text">Chat</span>
+        </a>
+        <a mat-list-item class="mat-list-item main-nav__link main-nav__link--expanded"
+           (click)="expanded = !expanded;">
+          <mat-icon>topic</mat-icon>
+          <span mat-ripple class="text">Employer</span>
+          <mat-icon [class.rotate]="expanded" class="expand-icon">
+            expand_more
+          </mat-icon>
+          <div class="sub-nav" *ngIf="expanded">
+            <a mat-list-item class="mat-list-item main-nav__link" routerLink="/employer" routerLinkActive="main-nav__link--active" (click)="$event.stopPropagation();">
+              <mat-icon>analytics</mat-icon>
+              <span mat-ripple class="text">Sub Nav 1</span>
+            </a>
+            <a mat-list-item class="mat-list-item main-nav__link" routerLinkActive="main-nav__link--active" (click)="$event.stopPropagation();">
+              <mat-icon>assignment</mat-icon>
+              <span mat-ripple class="text">Sub Nav 2</span>
+            </a>
+            <a mat-list-item class="mat-list-item main-nav__link" routerLinkActive="main-nav__link--active" (click)="$event.stopPropagation();">
+              <mat-icon>bug_report</mat-icon>
+              <span mat-ripple class="text">Sub Nav 3</span>
+            </a>
+          </div>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</main>
