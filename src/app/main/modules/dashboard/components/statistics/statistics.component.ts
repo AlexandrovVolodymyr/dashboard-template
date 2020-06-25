@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class StatisticsComponent implements OnInit {
 
-  @Input() statistics: any;
+  @Input() statistics;
   optionValue = 'Employees';
 
   constructor() { }

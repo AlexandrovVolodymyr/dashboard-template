@@ -17,20 +17,20 @@ export class ChartIncomeComponent implements OnInit {
     const chartIncome = new Chart('chartIncome', {
       type: 'bar',
       data: {
-        labels: ['Blue', 'Purple', 'Green', 'Orange'],
+        labels: ['Employees', 'Contacts', 'Documentations', 'Consultations'],
         datasets: [{
-          label: '# of Votes',
+          // label: '# of Votes',
           data: [this.statistics[0].income, this.statistics[1].income, this.statistics[2].income, this.statistics[3].income],
           backgroundColor: [
             'rgba(0, 0, 255, 0.4)',
             'rgba(128, 0, 128, 0.4)',
-            'rgba(0, 128, 0, 0.4)',
+            'rgba(0, 73, 128, 0.4)',
             'rgba(255, 165, 0, 0.4)',
           ],
           borderColor: [
             'rgba(0, 0, 255, 0.4)',
             'rgba(128, 0, 128, 0.4)',
-            'rgba(0, 128, 0, 0.4)',
+            'rgba(0, 73, 128, 0.4)',
             'rgba(255, 165, 0, 0.4)',
           ],
           borderWidth: 1
