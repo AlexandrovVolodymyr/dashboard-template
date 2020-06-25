@@ -1,8 +1,8 @@
 <main class="main">
-  <app-header></app-header>
+  <app-header (toggleEvent)="isOpen = !isOpen"></app-header>
 
-  <mat-sidenav-container class="main-layout">
-    <mat-sidenav opened mode="side">
+  <mat-sidenav-container class="main-layout" (backdropClick)="isOpen = false;">
+    <mat-sidenav [mode]="mode" [opened]="isOpen">
       <mat-nav-list class="main-nav">
         <a mat-list-item class="mat-list-item main-nav__link"
            routerLink="/dashboard"

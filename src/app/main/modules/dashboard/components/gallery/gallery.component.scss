@@ -19,6 +19,9 @@
         max-width: 60%;
         margin: auto auto 40px;
       }
+      @media screen and (max-width: 992px) {
+        max-width: 100%;
+      }
     }
 
     .gallery-card {
@@ -71,7 +74,6 @@
         position: absolute;
         left: 0;
         top: 40%;
-        //transform: translate(0, -50%);
 
         .mat-badge-content {
           position: static;
