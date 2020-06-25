@@ -15,6 +15,9 @@ import { ChartsComponent } from './components/charts/charts.component';
 import { ChartGenderComponent } from './components/chart-gender/chart-gender.component';
 import { ChartAgeComponent } from './components/chart-age/chart-age.component';
 import { ChartIncomeComponent } from './components/chart-income/chart-income.component';
+import { MainNavItemComponent } from './components/main-nav-item/main-nav-item.component';
+import { MatListModule } from '@angular/material/list';
+import { MatRippleModule } from '@angular/material/core';
 
 const routes: Routes = [
   {
@@ -31,7 +34,8 @@ const routes: Routes = [
     ChartsComponent,
     ChartGenderComponent,
     ChartAgeComponent,
-    ChartIncomeComponent
+    ChartIncomeComponent,
+    MainNavItemComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +44,12 @@ const routes: Routes = [
     MatCardModule,
     MatDividerModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    MatRippleModule
   ],
+  exports: [
+    MainNavItemComponent
+  ]
 })
 export class DashboardModule {}

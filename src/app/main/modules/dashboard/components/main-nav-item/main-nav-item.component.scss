@@ -1,0 +1,34 @@
+.main-nav__link {
+  border-radius: 4px;
+
+  &.active {
+    color: red;
+    background-color: #5e77ff;
+  }
+
+  mat-icon {
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  span {
+    color: #ffffff;
+    display: inline-block;
+    padding-left: 20px;
+  }
+
+  &:hover {
+    background-color: #5e77ff;
+
+    mat-icon {
+      color: #ffffff;
+    }
+  }
+}
+
+.mat-icon {
+  transition: all 0.3s linear;
+
+  &.rotate {
+    transform: rotate(180deg);
+  }
+}

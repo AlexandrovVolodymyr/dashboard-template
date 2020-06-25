@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './modules/main/main.component';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MainComponent } from './modules/main/main.component';
     MatSidenavModule,
     MatListModule,
     MatRippleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DashboardModule
   ]
 })
 export class MainModule { }

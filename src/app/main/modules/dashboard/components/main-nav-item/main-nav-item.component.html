@@ -1,0 +1,19 @@
+<a mat-list-item class="mat-list-item main-nav__link"
+   [ngStyle]="{'padding-left': depth * 12 + 'px'}"
+   (click)="toggle(item);">
+  <mat-icon>{{ item.icon }}</mat-icon>
+  <span mat-ripple class="text">{{ item.name }}</span>
+  <span *ngIf="item.children && item.children.length">
+    <span></span>
+    <mat-icon [class.rotate]="expanded">
+      expand_more
+    </mat-icon>
+  </span>
+</a>
+<div *ngIf="expanded">
+  <app-main-nav-item *ngFor="let child of item.children"
+                     [item]="child"
+                     [depth]="depth + 1">
+  </app-main-nav-item>
+</div>
+

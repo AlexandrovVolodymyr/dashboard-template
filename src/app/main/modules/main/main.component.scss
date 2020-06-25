@@ -30,46 +30,5 @@
       height: 1px;
       background-color: rgba(255, 255, 255, 0.25);
     }
-
-    &__link {
-      border-radius: 4px;
-
-      &--active {
-        background-color: #5e77ff;
-      }
-
-      mat-icon {
-        color: rgba(255, 255, 255, 0.25);
-      }
-
-      span {
-        color: #ffffff;
-        display: inline-block;
-        padding-left: 20px;
-      }
-
-      &:hover {
-        background-color: #5e77ff;
-
-        mat-icon {
-          color: #ffffff;
-        }
-      }
-    }
-
-    .expand-icon.mat-icon {
-      margin-left: auto;
-      transition: all 0.3s linear;
-
-      &.rotate {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  .sub-nav {
-    position: absolute;
-    left: 25px;
-    top: 50px;
   }
 }

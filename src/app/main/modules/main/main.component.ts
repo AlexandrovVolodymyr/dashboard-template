@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatDrawerMode } from '@angular/material/sidenav';
+
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MatDrawerMode } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-main',
@@ -11,10 +12,56 @@ import { MatDrawerMode } from '@angular/material/sidenav';
 })
 export class MainComponent implements OnInit, OnDestroy {
 
+  navItems = [
+    {
+      name: 'Dashboard',
+      icon: 'dashboard',
+      route: '/dashboard',
+    },
+    {
+      name: 'Calendar',
+      icon: 'calendar_today',
+      route: '/calendar',
+    },
+    {
+      name: 'Chat',
+      icon: 'chat',
+      route: '/chat',
+    },
+    {
+      name: 'Employer',
+      icon: 'topic',
+      children: [
+        {
+          name: 'Sub nav1',
+          icon: 'analytics',
+          children: [
+            {
+              name: 'Sub nav1.1',
+              icon: 'dashboard',
+              route: '/employer',
+            },
+          ]
+        },
+        {
+          name: 'Sub nav2',
+          icon: 'assignment',
+          route: '/employer',
+        },
+        {
+          name: 'Sub nav3',
+          icon: 'bug_report',
+          route: '/employer',
+        }
+      ]
+    }
+  ];
   isOpen = false;
   expanded = false;
   mode: MatDrawerMode = 'side';
+
   private unsubscribe$: Subject<void> = new Subject<void>();
+
   constructor(
     breakpointObserver: BreakpointObserver,
   ) {
