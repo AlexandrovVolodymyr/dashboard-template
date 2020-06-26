@@ -1,11 +1,6 @@
 .main-nav__link {
   border-radius: 4px;
 
-  &.active {
-    color: red;
-    background-color: #5e77ff;
-  }
-
   mat-icon {
     color: rgba(255, 255, 255, 0.25);
   }

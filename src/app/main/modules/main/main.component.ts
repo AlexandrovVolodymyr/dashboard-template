@@ -4,6 +4,7 @@ import { MatDrawerMode } from '@angular/material/sidenav';
 
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { NavItems } from '../../shared/interfaces/nav-items';
 
 @Component({
   selector: 'app-main',
@@ -12,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class MainComponent implements OnInit, OnDestroy {
 
-  navItems = [
+  navItems: NavItems[] = [
     {
       name: 'Dashboard',
       icon: 'dashboard',
@@ -57,7 +58,6 @@ export class MainComponent implements OnInit, OnDestroy {
     }
   ];
   isOpen = false;
-  expanded = false;
   mode: MatDrawerMode = 'side';
 
   private unsubscribe$: Subject<void> = new Subject<void>();
@@ -84,5 +84,4 @@ export class MainComponent implements OnInit, OnDestroy {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
-
 }
