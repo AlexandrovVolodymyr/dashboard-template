@@ -1,19 +1,16 @@
 .main {
-  min-height: 100vh;
   height: 100%;
 
   .main-layout {
-    min-height: calc(100% - 64px);
+    height: calc(100% - 64px);
 
     mat-sidenav {
       width: 250px;
       background-color: #3f51b5;
-      height: 100%;
     }
 
     mat-sidenav-content {
       background-color: #eeeeee;
-      height: calc(100vh - 64px);
     }
   }
 
