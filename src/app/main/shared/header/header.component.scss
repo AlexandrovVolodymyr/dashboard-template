@@ -4,3 +4,10 @@
     display: inline-block;
   }
 }
+
+.circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
